@@ -11,7 +11,7 @@ import (
 func main() {
 	newDB := db.NewDB()
 
-	conn, err := newDB.Connect()
+	conn, err := newDB.Connect("../sqlite/test.db")
 
 	if err != nil {
 		panic(err)

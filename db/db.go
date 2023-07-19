@@ -14,8 +14,8 @@ func NewDB() *DB {
 	return &DB{}
 }
 
-func (db *DB) Connect() (*sql.DB, error) {
-	conn, err := sql.Open("sqlite3", "../sqlite/test.db")
+func (db *DB) Connect(path string) (*sql.DB, error) {
+	conn, err := sql.Open("sqlite3", path)
 
 	if err != nil {
 		return nil, err
